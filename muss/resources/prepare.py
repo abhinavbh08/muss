@@ -21,7 +21,8 @@ def prepare_wikilarge():
     print('WikiLarge')
     dataset = 'wikilarge'  # dataset = wikismall works as well
     with create_directory_or_skip(get_dataset_dir(dataset)):
-        url = 'https://github.com/louismartin/dress-data/raw/master/data-simplification.tar.bz2'
+        # url = 'https://github.com/louismartin/dress-data/raw/master/data-simplification.tar.bz2'
+        url = "https://github.com/abhinavbh08/added-data/raw/master/data-simplification.tar.bz2"
         extracted_path = download_and_extract(url)[0]
         # Process
         print('Processing...')
