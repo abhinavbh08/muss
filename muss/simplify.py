@@ -44,10 +44,10 @@ def get_language_from_model_name(model_name):
 def get_muss_preprocessors(model_name):
     language = get_language_from_model_name(model_name)
     preprocessors_kwargs = {
-        'LengthRatioPreprocessor': {'target_ratio': 0.9, 'use_short_name': False},
-        'ReplaceOnlyLevenshteinPreprocessor': {'target_ratio': 0.65, 'use_short_name': False},
-        'WordRankRatioPreprocessor': {'target_ratio': 0.75, 'language': language, 'use_short_name': False},
-        'DependencyTreeDepthRatioPreprocessor': {'target_ratio': 0.4, 'language': language, 'use_short_name': False},
+        'LengthRatioPreprocessor': {'target_ratio': 0.85, 'use_short_name': False},
+        'ReplaceOnlyLevenshteinPreprocessor': {'target_ratio': 0.7, 'use_short_name': False},
+        'WordRankRatioPreprocessor': {'target_ratio': 0.8, 'language': language, 'use_short_name': False},
+        'DependencyTreeDepthRatioPreprocessor': {'target_ratio': 0.7, 'language': language, 'use_short_name': False},
     }
     if is_model_using_mbart(model_name):
         preprocessors_kwargs['SentencePiecePreprocessor'] = {
