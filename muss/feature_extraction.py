@@ -24,8 +24,8 @@ def get_word2rank(vocab_size=10 ** 5, language='en'):
             break
         word = line.split(' ')[0]
         word2rank[word] = i
+    print("Word2Rank size", len(word2rank))
     return word2rank
-
 
 def get_rank(word, language='en'):
     return get_word2rank(language=language).get(word, len(get_word2rank(language=language)))
