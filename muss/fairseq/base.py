@@ -108,8 +108,8 @@ def fairseq_train(
         --criterion {criterion} --label-smoothing 0.1
         --lr-scheduler {lr_scheduler} --lr {lr} --warmup-updates {warmup_updates} --update-freq {update_freq}
         --arch {arch} --dropout {dropout} --weight-decay 0.0 --clip-norm 0.1 --share-all-embeddings
-        --save-interval 6 --validate-interval 999999
-        --max-epoch 6 --no-last-checkpoints --patience 10
+        --save-interval 3 --validate-interval 999999
+        --max-epoch 3 --no-last-checkpoints --patience 10
         --batch-size {max_sentences} --seed {seed}
         --distributed-world-size {ngpus} --distributed-port {distributed_port}
         '''
