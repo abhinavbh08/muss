@@ -15,7 +15,7 @@ from muss.resources.datasets import create_smaller_dataset
 prepare_wikilarge_detokenized()
 prepare_asset()
 dataset = 'wikilarge_detokenized'
-kwargs = get_bart_kwargs(dataset=dataset, language='en', use_access=True)
+kwargs = get_bart_kwargs(dataset=dataset, language='en', use_access=False)
 kwargs['train_kwargs']['ngpus'] = 1  # Set this from 8 to 1 for local training
 kwargs['train_kwargs']['max_tokens'] = 512  # Lower this number to prevent OOM
 result = fairseq_train_and_evaluate_with_parametrization(**kwargs)
